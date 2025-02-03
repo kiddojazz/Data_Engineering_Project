@@ -1,0 +1,15 @@
+# General dependencies
+python-dotenv
+pandas
+numpy
+logging
+
+# Azure Storage dependencies
+azure-storage-file-datalake
+
+# PostgreSQL dependencies
+psycopg2-binary
+sqlalchemy
+
+# Airflow dependencies (if used in Airflow DAGs)
+apache-airflow

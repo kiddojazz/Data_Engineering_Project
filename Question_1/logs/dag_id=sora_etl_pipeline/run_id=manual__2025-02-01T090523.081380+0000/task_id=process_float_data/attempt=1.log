@@ -1,0 +1,112 @@
+[2025-02-01T09:12:40.930+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-01T09:12:40.959+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sora_etl_pipeline.process_float_data manual__2025-02-01T09:05:23.081380+00:00 [queued]>
+[2025-02-01T09:12:40.973+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sora_etl_pipeline.process_float_data manual__2025-02-01T09:05:23.081380+00:00 [queued]>
+[2025-02-01T09:12:40.975+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2025-02-01T09:12:41.000+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_float_data> on 2025-02-01 09:05:23.081380+00:00
+[2025-02-01T09:12:41.010+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=214) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-01T09:12:41.014+0000] {standard_task_runner.py:72} INFO - Started process 216 to run task
+[2025-02-01T09:12:41.015+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sora_etl_pipeline', 'process_float_data', 'manual__2025-02-01T09:05:23.081380+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmph8bhdaj0']
+[2025-02-01T09:12:41.020+0000] {standard_task_runner.py:105} INFO - Job 26: Subtask process_float_data
+[2025-02-01T09:12:41.115+0000] {task_command.py:467} INFO - Running <TaskInstance: sora_etl_pipeline.process_float_data manual__2025-02-01T09:05:23.081380+00:00 [running]> on host a76c925adcd3
+[2025-02-01T09:12:41.249+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sora_etl_pipeline' AIRFLOW_CTX_TASK_ID='process_float_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T09:05:23.081380+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-01T09:05:23.081380+00:00'
+[2025-02-01T09:12:41.253+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-01T09:12:41.294+0000] {_universal.py:509} INFO - Request URL: 'https://***datalakestaging.dfs.core.windows.net/sora-container?resource=REDACTED&directory=REDACTED&recursive=REDACTED&sv=REDACTED&st=REDACTED&se=REDACTED&sr=REDACTED&sp=REDACTED&sig=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b07725aa-e07c-11ef-a278-0242ac150006'
+No body was attached to the request
+[2025-02-01T09:12:42.317+0000] {_universal.py:545} INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json;charset=utf-8'
+    'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '63f0e188-501f-000a-0a89-74c33c000000'
+    'x-ms-version': 'REDACTED'
+    'x-ms-client-request-id': 'b07725aa-e07c-11ef-a278-0242ac150006'
+    'Date': 'Sat, 01 Feb 2025 09:12:42 GMT'
+[2025-02-01T09:12:43.513+0000] {warnings.py:112} WARNING - /opt/***/dags/utils.py:118: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql_query(query, conn, params=params)
+
+[2025-02-01T09:12:44.122+0000] {_universal.py:509} INFO - Request URL: 'https://***datalakestaging.blob.core.windows.net/sora-container/Float/Float_allocations.csv?sv=REDACTED&st=REDACTED&se=REDACTED&sr=REDACTED&sp=REDACTED&sig=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b226aa9c-e07c-11ef-a278-0242ac150006'
+No body was attached to the request
+[2025-02-01T09:12:45.210+0000] {_universal.py:545} INFO - Response status: 206
+Response headers:
+    'Content-Length': '1288'
+    'Content-Type': 'application/vnd.ms-excel'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Fri, 31 Jan 2025 21:08:37 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DD423B6DDEC540"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '7ff935bb-201e-002f-0a89-746a40000000'
+    'x-ms-client-request-id': 'b226aa9c-e07c-11ef-a278-0242ac150006'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sat, 01 Feb 2025 09:12:45 GMT'
+[2025-02-01T09:12:46.675+0000] {warnings.py:112} WARNING - /opt/***/dags/utils.py:118: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql_query(query, conn, params=params)
+
+[2025-02-01T09:12:48.679+0000] {warnings.py:112} WARNING - /opt/***/dags/utils.py:118: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql_query(query, conn, params=params)
+
+[2025-02-01T09:12:50.988+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:74: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  existing_dim = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:12:52.832+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:107: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  mapping = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:12:54.778+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:74: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  existing_dim = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:12:56.515+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:107: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  mapping = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:12:58.253+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:74: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  existing_dim = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:12:59.906+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:107: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  mapping = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:13:01.439+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:74: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  existing_dim = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:13:03.058+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:107: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  mapping = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:13:05.014+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:74: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  existing_dim = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:13:08.668+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_process.py:107: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  mapping = pd.read_sql(query, self.db_client.get_connection())
+
+[2025-02-01T09:13:12.951+0000] {etl_dag.py:76} INFO - Float ETL process completed successfully
+[2025-02-01T09:13:12.954+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-01T09:13:12.977+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-01T09:13:12.978+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=sora_etl_pipeline, task_id=process_float_data, run_id=manual__2025-02-01T09:05:23.081380+00:00, execution_date=20250201T090523, start_date=20250201T091240, end_date=20250201T091312
+[2025-02-01T09:13:13.014+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-01T09:13:13.033+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-01T09:13:13.037+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,42 @@
+[2025-02-01T09:14:34.059+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-01T09:14:34.097+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sora_etl_pipeline.process_clickup_data manual__2025-02-01T08:53:12.036875+00:00 [queued]>
+[2025-02-01T09:14:34.118+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sora_etl_pipeline.process_clickup_data manual__2025-02-01T08:53:12.036875+00:00 [queued]>
+[2025-02-01T09:14:34.120+0000] {taskinstance.py:2866} INFO - Starting attempt 4 of 4
+[2025-02-01T09:14:34.148+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_clickup_data> on 2025-02-01 08:53:12.036875+00:00
+[2025-02-01T09:14:34.161+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=246) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-01T09:14:34.166+0000] {standard_task_runner.py:72} INFO - Started process 248 to run task
+[2025-02-01T09:14:34.167+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sora_etl_pipeline', 'process_clickup_data', 'manual__2025-02-01T08:53:12.036875+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmppx6u_0h9']
+[2025-02-01T09:14:34.173+0000] {standard_task_runner.py:105} INFO - Job 27: Subtask process_clickup_data
+[2025-02-01T09:14:34.279+0000] {task_command.py:467} INFO - Running <TaskInstance: sora_etl_pipeline.process_clickup_data manual__2025-02-01T08:53:12.036875+00:00 [running]> on host a76c925adcd3
+[2025-02-01T09:14:34.421+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sora_etl_pipeline' AIRFLOW_CTX_TASK_ID='process_clickup_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T08:53:12.036875+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-01T08:53:12.036875+00:00'
+[2025-02-01T09:14:34.423+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-01T09:14:34.465+0000] {_universal.py:509} INFO - Request URL: 'https://***datalakestaging.dfs.core.windows.net/sora-container?resource=REDACTED&directory=REDACTED&recursive=REDACTED&sv=REDACTED&st=REDACTED&se=REDACTED&sr=REDACTED&sp=REDACTED&sig=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f3eba982-e07c-11ef-84b8-0242ac150006'
+No body was attached to the request
+[2025-02-01T09:14:35.994+0000] {_universal.py:545} INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json;charset=utf-8'
+    'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '7d9b2739-101f-0069-0289-745ec7000000'
+    'x-ms-version': 'REDACTED'
+    'x-ms-client-request-id': 'f3eba982-e07c-11ef-84b8-0242ac150006'
+    'Date': 'Sat, 01 Feb 2025 09:14:35 GMT'
+[2025-02-01T09:14:37.649+0000] {warnings.py:112} WARNING - /opt/***/dags/utils.py:118: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql_query(query, conn, params=params)
+
+[2025-02-01T09:14:38.073+0000] {etl_dag.py:49} INFO - ClickUp ETL process completed successfully
+[2025-02-01T09:14:38.075+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-01T09:14:38.093+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-01T09:14:38.094+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=sora_etl_pipeline, task_id=process_clickup_data, run_id=manual__2025-02-01T08:53:12.036875+00:00, execution_date=20250201T085312, start_date=20250201T091434, end_date=20250201T091438
+[2025-02-01T09:14:38.164+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-01T09:14:38.205+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-01T09:14:38.208+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

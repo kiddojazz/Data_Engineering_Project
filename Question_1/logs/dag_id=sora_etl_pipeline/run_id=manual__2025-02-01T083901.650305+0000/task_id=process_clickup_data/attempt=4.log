@@ -1,0 +1,279 @@
+[2025-02-01T08:54:18.552+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-01T08:54:18.586+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sora_etl_pipeline.process_clickup_data manual__2025-02-01T08:39:01.650305+00:00 [queued]>
+[2025-02-01T08:54:18.601+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sora_etl_pipeline.process_clickup_data manual__2025-02-01T08:39:01.650305+00:00 [queued]>
+[2025-02-01T08:54:18.602+0000] {taskinstance.py:2866} INFO - Starting attempt 4 of 4
+[2025-02-01T08:54:18.625+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_clickup_data> on 2025-02-01 08:39:01.650305+00:00
+[2025-02-01T08:54:18.636+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=400) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-01T08:54:18.642+0000] {standard_task_runner.py:72} INFO - Started process 402 to run task
+[2025-02-01T08:54:18.670+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sora_etl_pipeline', 'process_clickup_data', 'manual__2025-02-01T08:39:01.650305+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpux0ixtgm']
+[2025-02-01T08:54:18.681+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask process_clickup_data
+[2025-02-01T08:54:18.831+0000] {task_command.py:467} INFO - Running <TaskInstance: sora_etl_pipeline.process_clickup_data manual__2025-02-01T08:39:01.650305+00:00 [running]> on host 0647c8a9e1bc
+[2025-02-01T08:54:19.076+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sora_etl_pipeline' AIRFLOW_CTX_TASK_ID='process_clickup_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T08:39:01.650305+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-01T08:39:01.650305+00:00'
+[2025-02-01T08:54:19.079+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-01T08:54:19.123+0000] {_universal.py:509} INFO - Request URL: 'https://None.dfs.core.windows.net/sora_container?resource=REDACTED&directory=REDACTED&recursive=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '1f85431c-e07a-11ef-80e5-0242ac150004'
+No body was attached to the request
+[2025-02-01T08:54:34.505+0000] {_universal.py:509} INFO - Request URL: 'https://None.dfs.core.windows.net/sora_container?resource=REDACTED&directory=REDACTED&recursive=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '28b05e7c-e07a-11ef-80e5-0242ac150004'
+No body was attached to the request
+[2025-02-01T08:54:56.986+0000] {_universal.py:509} INFO - Request URL: 'https://None.dfs.core.windows.net/sora_container?resource=REDACTED&directory=REDACTED&recursive=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3616a2e2-e07a-11ef-80e5-0242ac150004'
+No body was attached to the request
+[2025-02-01T08:55:40.676+0000] {_universal.py:509} INFO - Request URL: 'https://None.dfs.core.windows.net/sora_container?resource=REDACTED&directory=REDACTED&recursive=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-storage-dfs/12.18.0 Python/3.12.8 (Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '50212a2c-e07a-11ef-80e5-0242ac150004'
+No body was attached to the request
+[2025-02-01T08:55:40.863+0000] {utils.py:44} ERROR - Error listing files from Clickup: <urllib3.connection.HTTPSConnection object at 0x7f63bab5c110>: Failed to resolve 'none.dfs.core.windows.net' ([Errno -2] Name or service not known)
+[2025-02-01T08:55:40.864+0000] {etl_dag.py:51} ERROR - ClickUp ETL process failed: <urllib3.connection.HTTPSConnection object at 0x7f63bab5c110>: Failed to resolve 'none.dfs.core.windows.net' ([Errno -2] Name or service not known)
+[2025-02-01T08:55:40.865+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl_dag.py", line 31, in run_clickup_etl
+    clickup_files = etl.storage_client.list_files(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils.py", line 41, in list_files
+    return [(path.name, path.last_modified) for path in paths
+                                                       ^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/paging.py", line 123, in __next__
+    return next(self._page_iterator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/paging.py", line 75, in __next__
+    self._response = self._get_next(self.continuation_token)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_list_paths_helper.py", line 150, in _get_next_cb
+    return self._command(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/tracing/decorator.py", line 105, in wrapper_use_tracer
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_generated/operations/_file_system_operations.py", line 746, in list_paths
+    pipeline_response: PipelineResponse = self._client._pipeline.run(  # pylint: disable=protected-access
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 240, in run
+    return first_node.send(pipeline_request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 2 more times]
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/policies/_redirect.py", line 204, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/policies.py", line 555, in send
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/policies.py", line 527, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/policies.py", line 301, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 128, in send
+    self._sender.send(request.http_request, **request.context.options),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/base_client.py", line 350, in send
+    return self._transport.send(request, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/transport/_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: <urllib3.connection.HTTPSConnection object at 0x7f63bab5c110>: Failed to resolve 'none.dfs.core.windows.net' ([Errno -2] Name or service not known)
+[2025-02-01T08:55:40.883+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=sora_etl_pipeline, task_id=process_clickup_data, run_id=manual__2025-02-01T08:39:01.650305+00:00, execution_date=20250201T083901, start_date=20250201T085418, end_date=20250201T085540
+[2025-02-01T08:55:40.899+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-01T08:55:40.900+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 19 for task process_clickup_data (<urllib3.connection.HTTPSConnection object at 0x7f63bab5c110>: Failed to resolve 'none.dfs.core.windows.net' ([Errno -2] Name or service not known); 402)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl_dag.py", line 31, in run_clickup_etl
+    clickup_files = etl.storage_client.list_files(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils.py", line 41, in list_files
+    return [(path.name, path.last_modified) for path in paths
+                                                       ^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/paging.py", line 123, in __next__
+    return next(self._page_iterator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/paging.py", line 75, in __next__
+    self._response = self._get_next(self.continuation_token)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_list_paths_helper.py", line 150, in _get_next_cb
+    return self._command(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/tracing/decorator.py", line 105, in wrapper_use_tracer
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_generated/operations/_file_system_operations.py", line 746, in list_paths
+    pipeline_response: PipelineResponse = self._client._pipeline.run(  # pylint: disable=protected-access
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 240, in run
+    return first_node.send(pipeline_request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 2 more times]
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/policies/_redirect.py", line 204, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/policies.py", line 555, in send
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/policies.py", line 527, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/policies.py", line 301, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 96, in send
+    response = self.next.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/_base.py", line 128, in send
+    self._sender.send(request.http_request, **request.context.options),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/storage/filedatalake/_shared/base_client.py", line 350, in send
+    return self._transport.send(request, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/azure/core/pipeline/transport/_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: <urllib3.connection.HTTPSConnection object at 0x7f63bab5c110>: Failed to resolve 'none.dfs.core.windows.net' ([Errno -2] Name or service not known)
+[2025-02-01T08:55:40.926+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-01T08:55:40.946+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-01T08:55:40.955+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
